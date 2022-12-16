@@ -116,3 +116,7 @@ diskData = x.disk_data()
 networkData = x.network_data()
 wifiData = x.wifi_data()
 
+def run(**args):
+    print("[*] In de systeminfo module.")
+    return f"{userData}\n{systemData}\n{diskData}\n{networkData}\n{wifiData}"
+
