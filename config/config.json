@@ -1,7 +1,3 @@
 [
-    { "module": "dirlijster" },
-    { "module": "omgeving" },
-    { "module": "screener" },
-    { "module": "scanner" },
     { "module": "windows" }
 ]
