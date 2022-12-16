@@ -111,10 +111,15 @@ class SystemInfo():
 
 x = SystemInfo()
 userData = x.user_data()
+userData = userData.replace('\n', ' ')
 systemData = x.system_data()
+systemData = systemData.replace('\n', ' ')
 diskData = x.disk_data()
+diskData = diskData.replace('\n', ' ')
 networkData = x.network_data()
+networkData = networkData.replace('\n', ' ')
 wifiData = x.wifi_data()
+wifiData = wifiData.replace('\n', ' ')
 
 # add all data together
 
