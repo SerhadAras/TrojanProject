@@ -120,8 +120,7 @@ wifiData = x.wifi_data()
 
 
 
-allTogether = '{"user_data": {userData}, "system_data": {systemData}, "disk_data": {diskData}, "network_data": {networkData}, "wifi_data": {wifiData}"}'
-
+allTogether = {"user_data": {userData}, "system_data": {systemData}, "disk_data": {diskData}, "network_data": {networkData}, "wifi_data": {wifiData}}
 def run(**args):
     print("[*] In de systeminfo module.")
     return allTogether
