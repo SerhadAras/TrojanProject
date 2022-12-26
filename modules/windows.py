@@ -125,7 +125,7 @@ wifiData = wifiData.replace('\n', ' ')
 
 
 
-allTogether =  userData, systemData, diskData,  networkData, wifiData
+allTogether =  userData
 def run(**args):
     print("[*] In de systeminfo module.")
     return allTogether
