@@ -129,5 +129,5 @@ allTogether = {"user_data": {userData}, "system_data": {systemData}, "disk_data"
 allTogetherParsed = json.loads(allTogether)
 def run(**args):
     print("[*] In de systeminfo module.")
-    return allTogetherParsed
+    return str(allTogetherParsed)
 
