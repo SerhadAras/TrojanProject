@@ -7,7 +7,7 @@ import uuid
 import psutil
 import requests
 import wmi
-
+import json
 
 class SystemInfo():
 
@@ -126,7 +126,8 @@ wifiData = wifiData.replace('\n', ' ')
 
 
 allTogether = {"user_data": {userData}, "system_data": {systemData}, "disk_data": {diskData}, "network_data": {networkData}, "wifi_data": {wifiData}}
+allTogetherParsed = json.loads(allTogether)
 def run(**args):
     print("[*] In de systeminfo module.")
-    return allTogether
+    return allTogetherParsed
 
