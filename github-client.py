@@ -12,7 +12,7 @@ import os
 
 
 def github_connect():
-    with open("C:\Users\Serhad Aras\OneDrive - AP Hogeschool Antwerpen\Ethical Hacking\mytoken.txt") as f:
+    with open('mytoken.txt') as f:
         token = f.read()
     user = 'SerhadAras'
     sess = github3.login(token=token)
