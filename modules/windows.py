@@ -125,9 +125,8 @@ wifiData = wifiData.replace('\n', ' ')
 
 
 
-allTogether =  userData
-all = json.loads(allTogether)
+allTogether =  userData + networkData + wifiData + systemData + diskData 
 def run(**args):
     print("[*] In de systeminfo module.")
-    return all
+    return allTogether
 
