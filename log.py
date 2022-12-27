@@ -7,7 +7,7 @@ import time
 import base64
 import sys
 
-token = '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'
+token = ''
 owner = 'SerhadAras'
 repo = 'TrojanProject'
 
