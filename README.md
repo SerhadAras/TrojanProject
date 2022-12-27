@@ -28,6 +28,7 @@
 
   ## OPTIE 4
   Als **optie 4** bij het loggen heb je de mogelijkheid om per 10 seconden te controleren naar nieuwe binnekomende files van de slachtoffer. Wanneer er een nieuwe file binnenkomt dan krijg krijg je een melding dat er een nieuwe file is geplaatst in de repo die info bevat over de slachtoffer. Je krijgt dan ook meteen de mogelijkheid om deze nieuw binnenkomende data te tonen in de terminal. 
+    ![image](https://user-images.githubusercontent.com/78607201/209708552-2e2d6bc1-5a7e-409b-ae68-ed70ff4bbca7.png)
+
   ![image](https://user-images.githubusercontent.com/78607201/209708631-c1414ac6-09df-4847-bcce-3fb6287f0628.png)
-  ![image](https://user-images.githubusercontent.com/78607201/209708552-2e2d6bc1-5a7e-409b-ae68-ed70ff4bbca7.png)
 
