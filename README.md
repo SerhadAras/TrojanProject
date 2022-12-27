@@ -1,6 +1,17 @@
 # TrojanProject
 ## Dit is het eindproject voor het vak EthicalHacking
 
+  Wat kan het script?
+  1. Diskdata
+  2. Networkdata
+  3. Userdata
+  4. Systemdata
+  5. Wifidata
+
+## Voorbeeld van output bij optie 3 van het log systeem:
+![image](https://user-images.githubusercontent.com/78607201/209707101-5d1b1e7d-8452-46e2-92d4-4d4132fbdf20.png)
+
+
 ## Hoe run je dit?
 1. Je start de Trojan bij de target door python github-client.py uit te voeren op de machine van de slachtoffer
 2. Op je eigen machine (aanvaller) start je de log.py script. 
