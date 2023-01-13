@@ -5,7 +5,7 @@
 
 Afhankelijk van je modules kan het initialisatie-proces gaan verschillen. Als je een module hebt die screenshots maakt dan moet je eerst gaan controleren hoeveel schermen er worden gedetecteerd op het huidige systeem. Als je een module hebt die alle netwerkdevices verzamelt dan moet je controleren op hoeveel internetverbinding de victim is aangesloten. Heeft hij 2 wificonnecties en daarbij nog een bekabelde connectie, enz.  Wat je bv standaard kan doen indien je zo’n zaken niet weet is default gegevens overnemen, bv. Er van uitgaan dat er minstens 1 wifi-connectie aanwezig is indien je trojan draait op een laptop, enz. 
 
- -- Welke module(s) zou je voorzien en hoe zou je deze zo efficiënt mogelijk kunnen implementeren. Beschrijf ook (telkens) de functionaliteit.
+ - Welke module(s) zou je voorzien en hoe zou je deze zo efficiënt mogelijk kunnen implementeren. Beschrijf ook (telkens) de functionaliteit.
  
  Momenteel gaan we er vanuit dat python is geïnstalleerd op het toestel van de client, maar dat is natuurlijk niet altijd het geval. Een extra module zou hiervoor natuurlijk ook niet werken omdat je geen python hebt maar wat we wel kunnen doen is standaard een binary maken om python te installeren en deze standaard runnen, zelfs als python is geïnstalleerd. Zo verhogen we onze kans op vangst van data.
 Indien we internationaal actief zouden zijn dan kunnen we sub folders gebruiken waarbij clients per land worden gecategoriseerd. Hierdoor hebben we een duidelijker overzicht tijdens het loggen van de data afkomstig van onze slachtoffers. 
