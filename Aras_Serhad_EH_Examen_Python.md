@@ -7,8 +7,9 @@ Afhankelijk van je modules kan het initialisatie-proces gaan verschillen. Als je
 
  - Welke module(s) zou je voorzien en hoe zou je deze zo efficiënt mogelijk kunnen implementeren. Beschrijf ook (telkens) de functionaliteit.
  
- Momenteel gaan we er vanuit dat python is geïnstalleerd op het toestel van de client, maar dat is natuurlijk niet altijd het geval. Een extra module zou hiervoor natuurlijk ook niet werken omdat je geen python hebt maar wat we wel kunnen doen is standaard een binary maken om python te installeren en deze standaard runnen, zelfs als python is geïnstalleerd. Zo verhogen we onze kans op vangst van data.
-Indien we internationaal actief zouden zijn dan kunnen we sub folders gebruiken waarbij clients per land worden gecategoriseerd. Hierdoor hebben we een duidelijker overzicht tijdens het loggen van de data afkomstig van onze slachtoffers. 
+ - Momenteel gaan we er vanuit dat python is geïnstalleerd op het toestel van de client, maar dat is natuurlijk niet altijd het geval. Een extra module zou hiervoor natuurlijk ook niet werken omdat je geen python hebt maar wat we wel kunnen doen is standaard een binary maken om python te installeren en deze standaard runnen, zelfs als python is geïnstalleerd. Zo verhogen we onze kans op vangst van data.
+
+- Indien we internationaal actief zouden zijn dan kunnen we sub folders gebruiken waarbij clients per land worden gecategoriseerd. Hierdoor hebben we een duidelijker overzicht tijdens het loggen van de data afkomstig van onze slachtoffers. 
 Een module die controleert op dat de trojan draait of niet zou ook een bruikbare module kunnen zijn. Zo kunnen we indien de trojan is uitgeschakelt deze terug proberen aan te zetten. We kunnen bv werken met een process ID tijdens het starten van de trojan. Deze module controleert constant deze process ID en gaat zien of deze nog draait of niet. Indien deze niet meer draait dan probeert die de trojan zelf te starten en dan weer in de gaten te houden met een nieuwe process ID. 
 
 Welke aanpassingen voorzie je te maken aan het framework, aan het configuratiegedeelte en aan de data-verzameling.
