@@ -1,7 +1,7 @@
 # TrojanProject
 ## Dit is het eindproject voor het vak EthicalHacking
 
-  Wat kan het script?
+  Wat kan het script??
   1. Diskdata
   2. Networkdata
   3. Userdata
